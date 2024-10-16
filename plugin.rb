@@ -6,7 +6,7 @@
 
 after_initialize do
   User.class_eval do
-    def registration_ip_address
+    def last_ip_address
       if [1, 2].include?(self.id)
         'hidden IP address'
       else
