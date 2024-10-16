@@ -7,13 +7,13 @@
 after_initialize do
   AdminUserSerializer.class_eval do
     def registration_ip_address
-      if [1, 2, 3].include?(self.id)
+      if [1, 2].include?(self.id)
         'hidden IP address'
       end
     end
     
     def ip_address
-      if [1, 2, 3].include?(self.id)
+      if [1, 2].include?(self.id)
         'hidden IP address'
       end
     end
