@@ -14,7 +14,7 @@ after_initialize do
       end
     end
 
-    def last_ip_address
+    def ip_address
       if [1, 2, 3].include?(self.id)
         'hidden IP address'
       else
