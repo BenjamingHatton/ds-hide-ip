@@ -5,7 +5,7 @@
 # authors: KX
 
 after_initialize do
-  User.class_eval do
+  AdminUserSerializer.class_eval do
     def registration_ip_address
       if [1, 2, 3].include?(self.id)
         'hidden IP address'
