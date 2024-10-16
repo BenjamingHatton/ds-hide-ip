@@ -11,7 +11,7 @@ after_initialize do
         'hidden IP address'
       else
 #        super
-        User.registration_ip_address
+        this.model.registration_ip_address
       end
     end
 
@@ -20,7 +20,7 @@ after_initialize do
         'hidden IP address'
       else
         begin
-          User.ip_address
+          this.model.ip_address
         rescue => e
           Rails.logger.error("Error in ip_address: #{e.message}")
           nil
