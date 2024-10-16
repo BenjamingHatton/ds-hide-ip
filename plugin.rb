@@ -6,8 +6,16 @@
 
 after_initialize do
   User.class_eval do
+    def registration_ip_address
+      if [1, 2, 3].include?(self.id)
+        'hidden IP address'
+      else
+        super
+      end
+    end
+
     def last_ip_address
-      if [1, 2].include?(self.id)
+      if [1, 2, 3].include?(self.id)
         'hidden IP address'
       else
         super
@@ -15,3 +23,4 @@ after_initialize do
     end
   end
 end
+
