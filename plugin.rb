@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# name: discourse-hide-ip
+# name: ds-hide-ip
 # about: Replace IP addresses with a hidden string
 # version: 0.1
 # authors: KX
