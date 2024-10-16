@@ -10,7 +10,8 @@ after_initialize do
       if [1, 2, 3].include?(self.id)
         'hidden IP address'
       else
-        super
+#        super
+        User.registration_ip_address
       end
     end
 
@@ -19,7 +20,7 @@ after_initialize do
         'hidden IP address'
       else
         begin
-          super
+          User.ip_address
         rescue => e
           Rails.logger.error("Error in ip_address: #{e.message}")
           nil
